@@ -25,13 +25,13 @@ namespace formTD4
             try {
                 int id = int.Parse(idTextBox.Text);
                 etudant e_ajouter = new etudant
-                (id, nomTextBox.Text, prenomTextBox.Text);
-                GestionEtudiant ec = new GestionEtudiant();
+                (id, nomTextBox.Text, prenomTextBox.Text);// ??
+                GestionEtudiant ec = new GestionEtudiant();//?
             }
 
-            
-        catch (Exception ex)
-    {MessageBox.Show (ex.Message);
+
+            catch (Exception ex){
+    MessageBox.Show (ex.Message);
     MessageBox.Show("le champ identifiont doit etre un nombre");}
         }
 
@@ -62,14 +62,14 @@ namespace formTD4
         private void cherche_Click(object sender, EventArgs e)
         {
             try
-            {
+            {/*
                 int id = int.Parse(idTextBox.Text);
                 etudant e_chercher = new etudant(id);
 
                 GestionEtudiant ec = new GestionEtudiant();
                 ec.supprimeEtudiant(e_chercher);
                 etudant e_ch = ec.chercherEtudiant(e_chercher);
-                nomTextBox.Text= e_ch.NOM;
+                nomTextBox.Text= e_ch.NOM;*/
             }
 
 
