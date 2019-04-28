@@ -135,6 +135,10 @@ namespace formTD4
 
         private void effacer_Click(object sender, EventArgs e)
         {
+           idTextBox.Clear();
+           nomTextBox.Clear();
+           prenomTextBox.Clear();
+
 
         }
 
