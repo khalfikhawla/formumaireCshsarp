@@ -8,7 +8,7 @@ namespace formTD4
     interface interfaceGestion 
     {
         void ajouterEtudiant(etudant e);
-        void modiferEtudiant(etudant e);
+        //void modiferEtudiant(etudant e);
         void supprimeEtudiant(etudant e);
         void chercherEtudiant(etudant e);
     }

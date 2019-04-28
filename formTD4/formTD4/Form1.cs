@@ -25,8 +25,8 @@ namespace formTD4
             try {
                 int id = int.Parse(idTextBox.Text);
                 etudant e_ajouter = new etudant
-                (id, nomTextBox.Text, prenomTextBox.Text);// ??
-                GestionEtudiant ec = new GestionEtudiant();//?
+                (id, nomTextBox.Text, prenomTextBox.Text);
+                gestionEtudiant ec = new gestionEtudiant();
             }
 
 
@@ -46,8 +46,8 @@ namespace formTD4
             {
                 int id = int.Parse(idTextBox.Text);
                 etudant e_supprimer = new etudant (id);
-                
-                GestionEtudiant em = new GestionEtudiant();
+
+                gestionEtudiant em = new gestionEtudiant();
                 em.supprimeEtudiant(e_supprimer);
             }
 
@@ -62,14 +62,14 @@ namespace formTD4
         private void cherche_Click(object sender, EventArgs e)
         {
             try
-            {/*
+            {
                 int id = int.Parse(idTextBox.Text);
                 etudant e_chercher = new etudant(id);
 
-                GestionEtudiant ec = new GestionEtudiant();
+                gestionEtudiant ec = new gestionEtudiant();
                 ec.supprimeEtudiant(e_chercher);
                 etudant e_ch = ec.chercherEtudiant(e_chercher);
-                nomTextBox.Text= e_ch.NOM;*/
+                nomTextBox.Text= e_ch.NOM;
             }
 
 

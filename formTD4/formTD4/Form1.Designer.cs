@@ -83,7 +83,7 @@
             // 
             // prenomTextBox
             // 
-            this.prenomTextBox.Location = new System.Drawing.Point(634, 69);
+            this.prenomTextBox.Location = new System.Drawing.Point(634, 62);
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(174, 22);
             this.prenomTextBox.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(87, 62);
+            this.idTextBox.Location = new System.Drawing.Point(87, 64);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(174, 22);
             this.idTextBox.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // nomTextBox
             // 
-            this.nomTextBox.Location = new System.Drawing.Point(340, 64);
+            this.nomTextBox.Location = new System.Drawing.Point(330, 65);
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(174, 22);
             this.nomTextBox.TabIndex = 7;
@@ -118,7 +118,7 @@
             // prenom
             // 
             this.prenom.AutoSize = true;
-            this.prenom.Location = new System.Drawing.Point(539, 69);
+            this.prenom.Location = new System.Drawing.Point(571, 65);
             this.prenom.Name = "prenom";
             this.prenom.Size = new System.Drawing.Size(57, 17);
             this.prenom.TabIndex = 9;
@@ -138,7 +138,7 @@
             // identifiant
             // 
             this.identifiant.AutoSize = true;
-            this.identifiant.Location = new System.Drawing.Point(12, 62);
+            this.identifiant.Location = new System.Drawing.Point(12, 68);
             this.identifiant.Name = "identifiant";
             this.identifiant.Size = new System.Drawing.Size(69, 17);
             this.identifiant.TabIndex = 11;

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace formTD4
 {
-    class GestionEtudiant : interfaceGestion
+    class gestionEtudiant :interfaceGestion
     {
         MySqlConnection conn;
         MySqlConnection connexion()
@@ -79,7 +79,10 @@ namespace formTD4
                 conn.Close();
                
             }
-           // return e_ch;
+            
         }
+
+
+        
     }
 }
