@@ -24,9 +24,11 @@ namespace formTD4
         {
             try {
                 int id = int.Parse(idTextBox.Text);
-                etudant e_ajouter = new etudant
+                etudiant e_ajouter = new etudiant
                 (id, nomTextBox.Text, prenomTextBox.Text);
                 gestionEtudiant ec = new gestionEtudiant();
+                
+                ec.ajouterEtudiant(e_ajouter);
             }
 
 
@@ -45,7 +47,8 @@ namespace formTD4
             try
             {
                 int id = int.Parse(idTextBox.Text);
-                etudant e_supprimer = new etudant (id);
+                // void supprimeEtudiant(etudiant e);
+                etudiant e_supprimer = new etudiant (id);
 
                 gestionEtudiant em = new gestionEtudiant();
                 em.supprimeEtudiant(e_supprimer);
@@ -64,12 +67,12 @@ namespace formTD4
             try
             {
                 int id = int.Parse(idTextBox.Text);
-                etudant e_chercher = new etudant(id);
+                etudiant e_chercher = new etudiant(id);
 
                 gestionEtudiant ec = new gestionEtudiant();
                 ec.supprimeEtudiant(e_chercher);
-                etudant e_ch = ec.chercherEtudiant(e_chercher);
-                nomTextBox.Text= e_ch.NOM;
+              //  etudiant e_ch = ec.chercherEtudiant(e_chercher);
+                nomTextBox.Text = e_chercher.NOM;
             }
 
 

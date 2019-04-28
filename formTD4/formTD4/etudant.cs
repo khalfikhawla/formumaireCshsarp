@@ -5,25 +5,25 @@ using System.Text;
 
 namespace formTD4
 {
-    class etudant
+    class etudiant
     {
         private int id;
         private string nom, prenom;
-        public etudant(int id , string nom , string prenom) {
+        public etudiant(int id , string nom , string prenom) {
             this.id = id;
             this.nom =nom;
             this.prenom = prenom;
         }
-        public etudant(string nom, string prenom)
+        public etudiant(string nom, string prenom)
         {
             this.nom = nom;
             this.prenom = prenom;
         }
-        public etudant(int id) {
+        public etudiant(int id) {
             this.id = id;
         }
 
-        public etudant()
+        public etudiant()
         {
             // TODO: Complete member initialization
         }

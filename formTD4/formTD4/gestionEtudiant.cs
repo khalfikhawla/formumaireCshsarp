@@ -13,7 +13,8 @@ namespace formTD4
         MySqlConnection connexion()
         {
             //localhost;username=root;password=;database=lfig2;
-            conn = new MySqlConnection("server=localhost;username=root;password=;database=lfig2;"); 
+            //server=1&db=lfig2&table=etudiant1&pos=0
+            conn = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=lfig2;"); 
             try
             {
                 if (conn.State == System.Data.ConnectionState.Closed)
@@ -32,7 +33,7 @@ namespace formTD4
             return conn;
         }
 
-        public void ajouterEtudiant(etudant e)
+        public void ajouterEtudiant(etudiant e)
         {
             conn = connexion();
             MySqlCommand cmd = new MySqlCommand("insert into etudiant1 (id,nom,prenom) values (@id , @nom, @prenom)", conn);
@@ -45,7 +46,7 @@ namespace formTD4
             MessageBox.Show("Ajouter");
             conn.Close();
         }
-        public void supprimeEtudiant(etudant e)
+        public void supprimeEtudiant(etudiant e)
         {
             conn = connexion();
             MySqlCommand cmd = new MySqlCommand("delet form etudiant1 wher id=@id ", conn);
@@ -55,9 +56,9 @@ namespace formTD4
             MessageBox.Show("supprimer");
             conn.Close();
         }
-        public void chercherEtudiant(etudant e)
+        public void chercherEtudiant(etudiant e)
         {
-            etudant e_ch = new etudant();
+            etudiant e_ch = new etudiant();
             conn = connexion();
             MySqlCommand cmd = new MySqlCommand("select * form etudiant1 wher id=@id ", conn);
             cmd.Parameters.AddWithValue("@id", e.ID);
