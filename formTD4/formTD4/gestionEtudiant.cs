@@ -12,8 +12,6 @@ namespace formTD4
         MySqlConnection conn;
         MySqlConnection connexion()
         {
-            //localhost;username=root;password=;database=lfig2;
-            //server=1&db=lfig2&table=etudiant1&pos=0
             conn = new MySqlConnection("server=localhost;port=3306;username=root;password=;database=lfig2;"); 
             try
             {
@@ -46,21 +44,41 @@ namespace formTD4
             MessageBox.Show("Ajouter");
             conn.Close();
         }
-        public void supprimeEtudiant(etudiant e)
+        /*public void supprimeEtudiant(etudiant e)
         {
-            conn = connexion();
+            conn = this.connexion();
             MySqlCommand cmd = new MySqlCommand("delet form etudiant1 wher id=@id ", conn);
             cmd.Parameters.AddWithValue("@id", e.ID);
             cmd.ExecuteNonQuery();
             cmd.Parameters.Clear();
             MessageBox.Show("supprimer");
             conn.Close();
+        }*/
+        public void supprimeEtudiant(etudiant e)
+        {
+            conn = this.connexion();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("delet form etudiant1 wher id=@id ", conn);
+                cmd.Parameters.AddWithValue("@id", e.ID);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                MessageBox.Show("supprimer");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                MessageBox.Show("Le champ identifiant doit etre un nombre " + e.ID + " ?");
+            }
         }
         public void chercherEtudiant(etudiant e)
         {
             etudiant e_ch = new etudiant();
             conn = connexion();
-            MySqlCommand cmd = new MySqlCommand("select * form etudiant1 wher id=@id ", conn);
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM etudiant1 where id=@id ", conn);
+            //Select * from TableName where "+ColumnName+"="'"+txtSearch.Text+"'" // Example
+
             cmd.Parameters.AddWithValue("@id", e.ID);
             using (MySqlDataReader lire = cmd.ExecuteReader())
             {
